@@ -1,0 +1,308 @@
+/* Toàn bộ layout */
+.admin-dashboard {
+  padding: 30px;
+  background: linear-gradient(135deg, #e8f0ff, #f9f9ff);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: #2d3436;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0984e3, #6c5ce7);
+  padding: 18px 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: white;
+  animation: fadeIn 0.4s ease;
+}
+
+.dashboard-header h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.role {
+  background: white;
+  color: #0984e3;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  background: #6c5ce7;
+  color: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-top: 5px solid #0984e3;
+}
+
+.stat-card:nth-child(2) {
+  border-top-color: #00b894;
+}
+
+.stat-card:nth-child(3) {
+  border-top-color: #e17055;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  font-size: 15px;
+  color: #636e72;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+/* Students Section */
+.student-section {
+  background: white;
+  border-radius: 14px;
+  margin-top: 35px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+.actions input:focus {
+  border-color: #0984e3;
+  outline: none;
+  box-shadow: 0 0 6px rgba(9, 132, 227, 0.3);
+}
+
+.actions button {
+  background: linear-gradient(90deg, #0984e3, #6c5ce7);
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.actions button:hover {
+  background: linear-gradient(90deg, #74b9ff, #a29bfe);
+  transform: scale(1.03);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  color: #636e72;
+  background-color: #f1f3f5;
+}
+
+tr:nth-child(even) {
+  background-color: #fafaff;
+}
+
+tr:hover {
+  background-color: #e8f0ff;
+  transition: background 0.2s ease;
+}
+
+.edit, .delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.edit {
+  color: #00b894;
+}
+
+.delete {
+  color: #d63031;
+}
+
+.edit:hover {
+  background: #dfe6e9;
+}
+
+.delete:hover {
+  background: #ffecec;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: linear-gradient(180deg, #ffffff, #f7f9ff);
+  border-radius: 14px;
+  padding: 25px;
+  width: 420px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #2d3436;
+}
+
+.modal-form input,
+.modal-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.modal-form input:focus,
+.modal-form select:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.3);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save {
+  background: linear-gradient(90deg, #00b894, #55efc4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel {
+  background: linear-gradient(90deg, #d63031, #ff7675);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.cancel:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

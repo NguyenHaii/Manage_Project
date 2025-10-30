@@ -1,0 +1,70 @@
+/* Sidebar Container */
+.sidebar {
+  width: 230px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  margin-right: 25px;
+}
+
+/* Sidebar Title */
+.sidebar h3 {
+  font-size: 18px;
+  color: #0984e3;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar Items */
+.sidebar ul li {
+  margin-bottom: 12px;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #2d3436;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover & Active States */
+.sidebar ul li a:hover {
+  background-color: #0984e3;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Active Link (optional if using NavLink) */
+.sidebar ul li a.active {
+  background-color: #0984e3;
+  color: white;
+  font-weight: 600;
+}
+
+/* Logout link special color */
+.sidebar ul li:last-child a {
+  color: #d63031;
+}
+
+.sidebar ul li:last-child a:hover {
+  background: #ff7675;
+  color: white;
+}
