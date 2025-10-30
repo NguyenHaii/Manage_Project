@@ -1,14 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { StudentProvider } from "./context/StudentContext";
-import AdminDashboard from "./pages/Admin/AdminDashboard";
-import RoleSelector from "./components/ui/RoleSelector";
+import { StudentProvider } from "../src/context/StudentContext";
+import AdminDashboard from "../src/pages/Admin/AdminDashboard";
+// import StudentDashboard from "../src/pages/Student/StudentDashboard";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<RoleSelector />} />
+        {/* Trang đăng nhập */}
+        <Route path="/" element={<Login />} />
+
+        {/* Trang admin, có context quản lý học sinh */}
         <Route
           path="/admin/*"
           element={
@@ -17,6 +21,9 @@ function App() {
             </StudentProvider>
           }
         />
+
+        {/* Trang student */}
+        {/* <Route path="/student/*" element={<StudentDashboard />} /> */}
       </Routes>
     </Router>
   );
